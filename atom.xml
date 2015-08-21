@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Dracupid's Mind Palace]]></title>
+  <subtitle><![CDATA[Never Mind]]></subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://dracupid.github.io/"/>
+  <updated>2015-08-21T03:13:19.000Z</updated>
+  <id>http://dracupid.github.io/</id>
+  
+  <author>
+    <name><![CDATA[dracupid]]></name>
+    <email><![CDATA[dracupid@gmail.com]]></email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Deal With Blocked googleapis.com]]></title>
+    <link href="http://dracupid.github.io/2014/10/04/googleapis/"/>
+    <id>http://dracupid.github.io/2014/10/04/googleapis/</id>
+    <published>2014-10-04T12:30:14.000Z</published>
+    <updated>2015-08-21T03:13:19.000Z</updated>
+    <content type="html"><![CDATA[<p>由于众所周知的原因，googleapis.com在中国大陆无法访问，但是仍有很多国内外网站的公共库和字体文件仍托管在googleapi上，造成大量网站在加载时出现延迟和静态资源404错误。<br><a id="more"></a></p>
+<p>###Solution<br>将对<a href="http://googleapis.com" target="_blank" rel="external">googleapis.com</a> 的访问重定向到360提供的google公共库和字体库CDN：</p>
+<ol>
+<li>下载安装chrome浏览器的<a href="https://chrome.google.com/webstore/detail/cnmciclhnghalnpfhhleggldniplelbg" target="_blank" rel="external">Switcheroo Redirector</a>插件</li>
+<li>制定如下重定向规则<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ajax.googleapis.com   &gt;   ajax.useso.com</span><br><span class="line">fonts.googleapis.com  &gt;   fonts.useso.com</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><strong>注：通过修改hosts文件将googleapis.com的访问解析到useso.com的IP地址是无效的</strong></p>]]></content>
+    <summary type="html">
+    <![CDATA[<p>由于众所周知的原因，googleapis.com在中国大陆无法访问，但是仍有很多国内外网站的公共库和字体文件仍托管在googleapi上，造成大量网站在加载时出现延迟和静态资源404错误。<br>]]>
+    
+    </summary>
+    
+      <category term="google" scheme="http://dracupid.github.io/tags/google/"/>
+    
+      <category term="googleapis" scheme="http://dracupid.github.io/tags/googleapis/"/>
+    
+      <category term="solution" scheme="http://dracupid.github.io/categories/solution/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <link href="http://dracupid.github.io/2014/10/04/hello-world/"/>
+    <id>http://dracupid.github.io/2014/10/04/hello-world/</id>
+    <published>2014-10-04T12:00:00.000Z</published>
+    <updated>2015-08-21T03:16:21.000Z</updated>
+    <content type="html"><![CDATA[<p>It’s a new start !<br>Will I keep writing the blog? God knows.<br><a id="more"></a></p>
+<blockquote>
+<p>Shall I compare thee to a Summers day ?<br>Thou art more lovely and more temperate<br>Rough winds do shake the darling buds of Maie,<br>And summers lease hath all too short a date:<br>Sometime too hot the eye of heaven shines,<br>And often is his gold complexion dimm’d, 　　　　<br>And every faire from faire some-time declines,<br>By chance, or natures changing course vntrim’d:<br>But thy eternall Summer shall not fade,<br>Nor loose possession of that faire thou ow’st, 　　　　<br>Nor shall death brag thou wandr’st in his shade, 　　　　<br>When in eternall lines to time thou grow’st,<br>So long as men can breath or eyes can see,<br>So long as lives this, and this gives life to thee.</p>
+</blockquote>]]></content>
+    <summary type="html">
+    <![CDATA[<p>It’s a new start !<br>Will I keep writing the blog? God knows.<br>]]>
+    
+    </summary>
+    
+  </entry>
+  
+</feed>
