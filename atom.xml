@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Never Mind]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dracupid.github.io/"/>
-  <updated>2015-08-21T03:13:19.000Z</updated>
+  <updated>2015-08-21T09:24:15.000Z</updated>
   <id>http://dracupid.github.io/</id>
   
   <author>
@@ -15,29 +15,57 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Deal With Blocked googleapis.com]]></title>
-    <link href="http://dracupid.github.io/2014/10/04/googleapis/"/>
-    <id>http://dracupid.github.io/2014/10/04/googleapis/</id>
-    <published>2014-10-04T12:30:14.000Z</published>
-    <updated>2015-08-21T03:13:19.000Z</updated>
-    <content type="html"><![CDATA[<p>由于众所周知的原因，googleapis.com在中国大陆无法访问，但是仍有很多国内外网站的公共库和字体文件仍托管在googleapi上，造成大量网站在加载时出现延迟和静态资源404错误。<br><a id="more"></a></p>
-<p>###Solution<br>将对<a href="http://googleapis.com" target="_blank" rel="external">googleapis.com</a> 的访问重定向到360提供的google公共库和字体库CDN：</p>
-<ol>
-<li>下载安装chrome浏览器的<a href="https://chrome.google.com/webstore/detail/cnmciclhnghalnpfhhleggldniplelbg" target="_blank" rel="external">Switcheroo Redirector</a>插件</li>
-<li>制定如下重定向规则<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ajax.googleapis.com   &gt;   ajax.useso.com</span><br><span class="line">fonts.googleapis.com  &gt;   fonts.useso.com</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>注：通过修改hosts文件将googleapis.com的访问解析到useso.com的IP地址是无效的</strong></p>]]></content>
+    <title><![CDATA[Run a Script in the Command Line]]></title>
+    <link href="http://dracupid.github.io/2015/08/21/runScript/"/>
+    <id>http://dracupid.github.io/2015/08/21/runScript/</id>
+    <published>2015-08-21T05:43:52.000Z</published>
+    <updated>2015-08-21T09:24:15.000Z</updated>
+    <content type="html"><![CDATA[<p>You need to understand the following terms before trying to run a script in CLI.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29" target="_blank" rel="external">shebang</a>: What is <code>#! /bin/bash</code>?</li>
+<li><a href="https://en.wikipedia.org/wiki/Modes_%28Unix%29" target="_blank" rel="external">modes</a>: What does <code>chmod +x</code> do?</li>
+<li><a href="https://en.wikipedia.org/wiki/PATH_%28variable%29" target="_blank" rel="external">PATH variable</a>: Commands are just programs in somewhere?</li>
+<li><a href="https://en.wikipedia.org/wiki/Working_directory" target="_blank" rel="external">Current Working Directory</a>: What does <code>.</code> means?</li>
+</ul>
+<a id="more"></a>
+<p><strong>There are normally two ways:</strong></p>
+<h3 id="Run_with_a_interpreter">Run with a interpreter</h3><p>In this way, shebang is not required and will be ignored if any. The script can be just a text file with no execute permission.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sh NAME.sh</span><br><span class="line">python NAME.py</span><br><span class="line">node NAME.js</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><code>NAME</code> is the name of the script file.</p>
+</blockquote>
+<h3 id="Run_the_file_directly">Run the file directly</h3><p>A script can also be executed without specifying a interpreter only if</p>
+<ul>
+<li>it has been applied execute permission by using <code>chmod +x FILE</code> or something equivalent.</li>
+<li>has declared a valid shebang.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./NAME.sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Ensure that the file name begins with <code>./</code>, or it will be regarded as in $PATH instead of the current working directory(unless you add ‘.’ to PATH).</p>
+</blockquote>
+<p>If you want to make the script behaves like a binary program or a command, you need to</p>
+<ul>
+<li>Add the script’s parent directory to PATH</li>
+<li>Remove file extension.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NAME</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
-    <![CDATA[<p>由于众所周知的原因，googleapis.com在中国大陆无法访问，但是仍有很多国内外网站的公共库和字体文件仍托管在googleapi上，造成大量网站在加载时出现延迟和静态资源404错误。<br>]]>
+    <![CDATA[<p>You need to understand the following terms before trying to run a script in CLI.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a>: What is <code>#! /bin/bash</code>?</li>
+<li><a href="https://en.wikipedia.org/wiki/Modes_%28Unix%29">modes</a>: What does <code>chmod +x</code> do?</li>
+<li><a href="https://en.wikipedia.org/wiki/PATH_%28variable%29">PATH variable</a>: Commands are just programs in somewhere?</li>
+<li><a href="https://en.wikipedia.org/wiki/Working_directory">Current Working Directory</a>: What does <code>.</code> means?</li>
+</ul>]]>
     
     </summary>
     
-      <category term="google" scheme="http://dracupid.github.io/tags/google/"/>
+      <category term="script" scheme="http://dracupid.github.io/tags/script/"/>
     
-      <category term="googleapis" scheme="http://dracupid.github.io/tags/googleapis/"/>
+      <category term="shell" scheme="http://dracupid.github.io/tags/shell/"/>
     
-      <category term="solution" scheme="http://dracupid.github.io/categories/solution/"/>
+      <category term="unix" scheme="http://dracupid.github.io/tags/unix/"/>
+    
+      <category term="shell" scheme="http://dracupid.github.io/categories/shell/"/>
     
   </entry>
   
@@ -46,11 +74,9 @@
     <link href="http://dracupid.github.io/2014/10/04/hello-world/"/>
     <id>http://dracupid.github.io/2014/10/04/hello-world/</id>
     <published>2014-10-04T12:00:00.000Z</published>
-    <updated>2015-08-21T03:16:21.000Z</updated>
+    <updated>2015-08-21T09:22:22.000Z</updated>
     <content type="html"><![CDATA[<p>It’s a new start !<br>Will I keep writing the blog? God knows.<br><a id="more"></a></p>
-<blockquote>
-<p>Shall I compare thee to a Summers day ?<br>Thou art more lovely and more temperate<br>Rough winds do shake the darling buds of Maie,<br>And summers lease hath all too short a date:<br>Sometime too hot the eye of heaven shines,<br>And often is his gold complexion dimm’d, 　　　　<br>And every faire from faire some-time declines,<br>By chance, or natures changing course vntrim’d:<br>But thy eternall Summer shall not fade,<br>Nor loose possession of that faire thou ow’st, 　　　　<br>Nor shall death brag thou wandr’st in his shade, 　　　　<br>When in eternall lines to time thou grow’st,<br>So long as men can breath or eyes can see,<br>So long as lives this, and this gives life to thee.</p>
-</blockquote>]]></content>
+<blockquote class="blockquote-center"><br>Shall I compare thee to a Summers day ?<br>Thou art more lovely and more temperate<br>Rough winds do shake the darling buds of Maie,<br>And summers lease hath all too short a date:<br>Sometime too hot the eye of heaven shines,<br>And often is his gold complexion dimm’d, 　　　　<br>And every faire from faire some-time declines,<br>By chance, or natures changing course vntrim’d:<br>But thy eternall Summer shall not fade,<br>Nor loose possession of that faire thou ow’st, 　　　　<br>Nor shall death brag thou wandr’st in his shade, 　　　　<br>When in eternall lines to time thou grow’st,<br>So long as men can breath or eyes can see,<br>So long as lives this, and this gives life to thee.<br></blockquote>]]></content>
     <summary type="html">
     <![CDATA[<p>It’s a new start !<br>Will I keep writing the blog? God knows.<br>]]>
     

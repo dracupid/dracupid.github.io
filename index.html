@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="theme-next use-motion">
+<html class="theme-next use-motion theme-next-mist">
 <head>
   
 
@@ -19,6 +19,8 @@
   <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5">
 
 
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1">
@@ -50,15 +52,15 @@
 
 <script type="text/javascript" id="hexo.configuration">
   var CONFIG = {
-    scheme: '',
-    sidebar: 'post'
+    scheme: 'Mist',
+    sidebar: 'always'
   };
 </script>
 
   <title> Dracupid's Mind Palace </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   <!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
@@ -116,7 +118,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br>
-            首页
+            Home
           </a>
         </li>
       
@@ -124,7 +126,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             <i class="menu-item-icon icon-next-categories"></i> <br>
-            分类
+            Categories
           </a>
         </li>
       
@@ -132,7 +134,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br>
-            归档
+            Archives
           </a>
         </li>
       
@@ -140,7 +142,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             <i class="menu-item-icon icon-next-tags"></i> <br>
-            标签
+            Tags
           </a>
         </li>
       
@@ -172,8 +174,8 @@
           
           
             
-              <a class="post-title-link" href="/2014/10/04/googleapis/" itemprop="url">
-                Deal With Blocked googleapis.com
+              <a class="post-title-link" href="/2015/08/21/runScript/" itemprop="url">
+                Run a Script in the Command Line
               </a>
             
           
@@ -182,19 +184,19 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2014-10-04T20:30:14+08:00" content="2014-10-04">
-            2014-10-04
+          Posted on
+          <time itemprop="dateCreated" datetime="2015-08-21T13:43:52+08:00" content="2015-08-21">
+            2015-08-21
           </time>
         </span>
 
         
           <span class="post-category">
-            &nbsp; | &nbsp; 分类于
+            &nbsp; | &nbsp; In
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/solution/" itemprop="url" rel="index">
-                  <span itemprop="name">solution</span>
+                <a href="/categories/shell/" itemprop="url" rel="index">
+                  <span itemprop="name">shell</span>
                 </a>
               </span>
 
@@ -209,8 +211,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2014/10/04/googleapis/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2014/10/04/googleapis/" itemprop="commentsCount"></span>
+              <a href="/2015/08/21/runScript/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/21/runScript/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -225,15 +227,21 @@
 
       
         
-          <p>由于众所周知的原因，googleapis.com在中国大陆无法访问，但是仍有很多国内外网站的公共库和字体文件仍托管在googleapi上，造成大量网站在加载时出现延迟和静态资源404错误。<br>
+          <p>You need to understand the following terms before trying to run a script in CLI.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29">shebang</a>: What is <code>#! /bin/bash</code>?</li>
+<li><a href="https://en.wikipedia.org/wiki/Modes_%28Unix%29">modes</a>: What does <code>chmod +x</code> do?</li>
+<li><a href="https://en.wikipedia.org/wiki/PATH_%28variable%29">PATH variable</a>: Commands are just programs in somewhere?</li>
+<li><a href="https://en.wikipedia.org/wiki/Working_directory">Current Working Directory</a>: What does <code>.</code> means?</li>
+</ul>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2014/10/04/googleapis/#more" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2015/08/21/runScript/#more" rel="contents">
+              Read more &raquo;
             </a>
           </div>
         
       
-    </p></div>
+    </div>
 
     <footer class="post-footer">
       
@@ -270,7 +278,7 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于
+          Posted on
           <time itemprop="dateCreated" datetime="2014-10-04T20:00:00+08:00" content="2014-10-04">
             2014-10-04
           </time>
@@ -301,7 +309,7 @@
           <p>It’s a new start !<br>Will I keep writing the blog? God knows.<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2014/10/04/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
+              Read more &raquo;
             </a>
           </div>
         
@@ -357,21 +365,21 @@
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">日志</span>
+              <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
               <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">分类</span>
+              <span class="site-state-item-name">categories</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">2</span>
-              <span class="site-state-item-name">标签</span>
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">tags</span>
               </a>
           </div>
 
@@ -433,13 +441,13 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  主题 -
+  Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
+    NexT.Mist
   </a>
 </div>
 
