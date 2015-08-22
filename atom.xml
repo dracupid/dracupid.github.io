@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Never Mind]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://dracupid.github.io/"/>
-  <updated>2015-08-22T13:32:05.000Z</updated>
+  <updated>2015-08-22T15:00:10.000Z</updated>
   <id>http://dracupid.github.io/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://dracupid.github.io/2015/08/21/runScript/"/>
     <id>http://dracupid.github.io/2015/08/21/runScript/</id>
     <published>2015-08-21T05:43:52.000Z</published>
-    <updated>2015-08-22T13:32:05.000Z</updated>
+    <updated>2015-08-22T15:00:10.000Z</updated>
     <content type="html"><![CDATA[<p>You need to understand the following terms before trying to run a script in CLI.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Shebang_%28Unix%29" target="_blank" rel="external">shebang</a>: What is <code>#! /bin/bash</code>?</li>
@@ -44,7 +44,7 @@
 </blockquote>
 <p>If you want to make the script behaves like a binary program or a command, you need to</p>
 <ul>
-<li>Add the script’s parent directory to PATH, or put the file under any folder in PATH.</li>
+<li>Add the script’s parent directory to PATH, or put(or create a symbol link of) the script file under any folder in PATH.</li>
 <li>Remove file extension.</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NAME</span><br></pre></td></tr></table></figure>]]></content>
